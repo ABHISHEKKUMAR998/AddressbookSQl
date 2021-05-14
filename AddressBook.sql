@@ -90,3 +90,94 @@ mysql> SELECT * FROM AddressBook
 |  2 | harsh      | kumar     | meethapur | new delhi | delhi | 1011010 |   3743787878 | sssa@122 |
 +----+------------+-----------+-----------+-----------+-------+---------+--------------+----------+
 2 rows in set (0.00 sec)
+
+#UC6
+
+mysql> ALTER TABLE AddressBook
+    -> ADD type VARCHAR(15);
+Query OK, 0 rows affected (2.26 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql>
+mysql>  SELECT * FROM AddressBook;
++----+------------+-----------+-----------+-----------+-------+---------+--------------+----------+------+
+| Id | First_Name | Last_Name | Address   | City      | State | Zip     | Phone_Number | Email    | type |
++----+------------+-----------+-----------+-----------+-------+---------+--------------+----------+------+
+|  1 | abhishek   | kumar     | badarpur  | new delhi | delhi |  110044 |   8368914101 | xyz@123  | NULL |
+|  2 | harsh      | kumar     | meethapur | new delhi | delhi | 1011010 |   3743787878 | sssa@122 | NULL |
++----+------------+-----------+-----------+-----------+-------+---------+--------------+----------+------+
+2 rows in set (0.00 sec)
+
+mysql> UPDATE AddressBook
+    -> SET type = 'Self'
+    ->  WHERE First_Name ='abhishek';
+Query OK, 1 row affected (0.09 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> UPDATE AddressBook
+    ->  SET type = 'Friend'
+    ->  WHERE First_Name ='harsh';
+Query OK, 1 row affected (0.17 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql>  SELECT * FROM AddressBook;
++----+------------+-----------+-----------+-----------+-------+---------+--------------+----------+--------+
+| Id | First_Name | Last_Name | Address   | City      | State | Zip     | Phone_Number | Email    | type   |
++----+------------+-----------+-----------+-----------+-------+---------+--------------+----------+--------+
+|  1 | abhishek   | kumar     | badarpur  | new delhi | delhi |  110044 |   8368914101 | xyz@123  | Self   |
+|  2 | harsh      | kumar     | meethapur | new delhi | delhi | 1011010 |   3743787878 | sssa@122 | Friend |
++----+------------+-----------+-----------+-----------+-------+---------+--------------+----------+--------+
+2 rows in set (0.00 sec)
+mysql> ALTER TABLE AddressBook
+    -> ADD type VARCHAR(15);
+Query OK, 0 rows affected (2.26 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql>
+mysql>  SELECT * FROM AddressBook;
++----+------------+-----------+-----------+-----------+-------+---------+--------------+----------+------+
+| Id | First_Name | Last_Name | Address   | City      | State | Zip     | Phone_Number | Email    | type |
++----+------------+-----------+-----------+-----------+-------+---------+--------------+----------+------+
+|  1 | abhishek   | kumar     | badarpur  | new delhi | delhi |  110044 |   8368914101 | xyz@123  | NULL |
+|  2 | harsh      | kumar     | meethapur | new delhi | delhi | 1011010 |   3743787878 | sssa@122 | NULL |
++----+------------+-----------+-----------+-----------+-------+---------+--------------+----------+------+
+2 rows in set (0.00 sec)
+
+mysql> UPDATE AddressBook
+    -> SET type = 'Self'
+    ->  WHERE First_Name ='abhishek';
+Query OK, 1 row affected (0.09 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> UPDATE AddressBook
+    ->  SET type = 'Friend'
+    ->  WHERE First_Name ='harsh';
+Query OK, 1 row affected (0.17 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql>  SELECT * FROM AddressBook;
++----+------------+-----------+-----------+-----------+-------+---------+--------------+----------+--------+
+| Id | First_Name | Last_Name | Address   | City      | State | Zip     | Phone_Number | Email    | type   |
++----+------------+-----------+-----------+-----------+-------+---------+--------------+----------+--------+
+|  1 | abhishek   | kumar     | badarpur  | new delhi | delhi |  110044 |   8368914101 | xyz@123  | Self   |
+|  2 | harsh      | kumar     | meethapur | new delhi | delhi | 1011010 |   3743787878 | sssa@122 | Friend |
++----+------------+-----------+-----------+-----------+-------+---------+--------------+----------+--------+
+2 rows in set (0.00 sec)
+
+#UC7
+
+mysql> SELECT City,COUNT(City) FROM AddressBook GROUP BY City;
++-----------+-------------+
+| City      | COUNT(City) |
++-----------+-------------+
+| new delhi |           2 |
++-----------+-------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT State,COUNT(State) FROM AddressBook GROUP BY State;
++-------+--------------+
+| State | COUNT(State) |
++-------+--------------+
+| delhi |            2 |
++-------+--------------+
+1 row in set (0.00 sec)
