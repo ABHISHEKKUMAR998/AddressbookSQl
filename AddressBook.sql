@@ -78,3 +78,15 @@ mysql>  SELECT * FROM AddressBook;
 |  2 | harsh      | kumar     | meethapur | new delhi | delhi | 1011010 |   3743787878 | sssa@122 |
 +----+------------+-----------+-----------+-----------+-------+---------+--------------+----------+
 2 rows in set (0.00 sec)
+
+#UC5
+
+mysql> SELECT * FROM AddressBook
+    -> WHERE City = 'new delhi';
++----+------------+-----------+-----------+-----------+-------+---------+--------------+----------+
+| Id | First_Name | Last_Name | Address   | City      | State | Zip     | Phone_Number | Email    |
++----+------------+-----------+-----------+-----------+-------+---------+--------------+----------+
+|  1 | abhishek   | kumar     | badarpur  | new delhi | delhi |  110044 |   8368914101 | xyz@123  |
+|  2 | harsh      | kumar     | meethapur | new delhi | delhi | 1011010 |   3743787878 | sssa@122 |
++----+------------+-----------+-----------+-----------+-------+---------+--------------+----------+
+2 rows in set (0.00 sec)
