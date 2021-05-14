@@ -57,3 +57,9 @@ mysql> DESCRIBE AddressBook;
 | Email        | varchar(150) | NO   |     | NULL    |                |
 +--------------+--------------+------+-----+---------+----------------+
 9 rows in set (0.00 sec)
+
+mysql>  INSERT INTO AddressBook(First_Name,Last_Name,Address,City,State,Zip,Phone_Number,Email) VALUES
+    -> ('abhishek','kumar','badarpur','new delhi','delhi','110044','8368914101','xyz@123'),
+    -> ('harsh','kumar','meethapur','new delhi','delhi','1011010','3743787878','sssa@122');
+Query OK, 2 rows affected (0.11 sec)
+Records: 2  Duplicates: 0  Warnings: 0
