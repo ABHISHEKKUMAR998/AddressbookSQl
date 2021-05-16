@@ -286,6 +286,27 @@ mysql>  SELECT COUNT(type) FROM addressbook;
 
 mysql>
 
+#UC11
+mysql> INSERT INTO AddressBook(First_Name,Last_Name,Address,City,State,Zip,Phone_Number,Email,type,name) VALUES
+    -> ('pratiik', 'Singh', 'panwel', 'Mumbai', 'Maharashtra', '530044','9426625688', 'sh@mln.com', 'Family',NULL);
+Query OK, 1 row affected (0.10 sec)
+
+mysql> select *From addresbook;
+ERROR 1146 (42S02): Table 'addressbookservice.addresbook' doesn't exist
+mysql>  select *From AddressBook;
++----+------------+-----------+-----------+-----------+-------------+---------+--------------+-------------+--------+------+
+| Id | First_Name | Last_Name | Address   | City      | State       | Zip     | Phone_Number | Email       | type   | name |
++----+------------+-----------+-----------+-----------+-------------+---------+--------------+-------------+--------+------+
+|  1 | abhishek   | kumar     | badarpur  | new delhi | delhi       |  110044 |   8368914101 | xyz@123     | Friend | NULL |
+|  2 | harsh      | kumar     | meethapur | new delhi | delhi       | 1011010 |   3743787878 | sssa@122    | Friend | NULL |
+|  3 | Kalyan     | Kumar     | Andheri   | Mumbai    | Maharashtra |  530066 |   9882763845 | pl@p.com    | Friend | NULL |
+|  4 | Atik       | Singh     | Dharavi   | Mumbai    | Maharashtra |  530044 |   9494631888 | mlk@mln.com | Friend | NULL |
+|  5 | pratiik    | Singh     | panwel    | Mumbai    | Maharashtra |  530044 |   9426625688 | sh@mln.com  | Family | NULL |
++----+------------+-----------+-----------+-----------+-------------+---------+--------------+-------------+--------+------+
+5 rows in set (0.03 sec)
+
+mysql>
+
 
 
 
