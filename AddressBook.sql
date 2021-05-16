@@ -155,6 +155,38 @@ mysql> UPDATE AddressBook
 Query OK, 1 row affected (0.17 sec)
 Rows matched: 1  Changed: 1  Warnings: 0
 
+#UC9
+
+mysql> select *From AddressBook;
++----+------------+-----------+-----------+-----------+-------------+---------+--------------+-------------+
+| Id | First_Name | Last_Name | Address   | City      | State       | Zip     | Phone_Number | Email       |
++----+------------+-----------+-----------+-----------+-------------+---------+--------------+-------------+
+|  1 | abhishek   | kumar     | badarpur  | new delhi | delhi       |  110044 |   8368914101 | xyz@123     |
+|  2 | harsh      | kumar     | meethapur | new delhi | delhi       | 1011010 |   3743787878 | sssa@122    |
+|  3 | Kalyan     | Kumar     | Andheri   | Mumbai    | Maharashtra |  530066 |   9882763845 | pl@p.com    |
+|  4 | Atik       | Singh     | Dharavi   | Mumbai    | Maharashtra |  530044 |   9494631888 | mlk@mln.com |
++----+------------+-----------+-----------+-----------+-------------+---------+--------------+-------------+
+4 rows in set (0.00 sec)
+
+mysql>  ALTER TABLE AddressBook ADD type VARCHAR(15) DEFAULT 'Friend';
+Query OK, 0 rows affected (0.32 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql>  ALTER TABLE AddressBook ADD name VARCHAR(15);
+Query OK, 0 rows affected (0.42 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> select *From AddressBook;
++----+------------+-----------+-----------+-----------+-------------+---------+--------------+-------------+--------+------+
+| Id | First_Name | Last_Name | Address   | City      | State       | Zip     | Phone_Number | Email       | type   | name |
++----+------------+-----------+-----------+-----------+-------------+---------+--------------+-------------+--------+------+
+|  1 | abhishek   | kumar     | badarpur  | new delhi | delhi       |  110044 |   8368914101 | xyz@123     | Friend | NULL |
+|  2 | harsh      | kumar     | meethapur | new delhi | delhi       | 1011010 |   3743787878 | sssa@122    | Friend | NULL |
+|  3 | Kalyan     | Kumar     | Andheri   | Mumbai    | Maharashtra |  530066 |   9882763845 | pl@p.com    | Friend | NULL |
+|  4 | Atik       | Singh     | Dharavi   | Mumbai    | Maharashtra |  530044 |   9494631888 | mlk@mln.com | Friend | NULL |
++----+------------+-----------+-----------+-----------+-------------+---------+--------------+-------------+--------+------+
+4 rows in set (0.07 sec)
+
 mysql>  SELECT * FROM AddressBook;
 +----+------------+-----------+-----------+-----------+-------+---------+--------------+----------+--------+
 | Id | First_Name | Last_Name | Address   | City      | State | Zip     | Phone_Number | Email    | type   |
@@ -204,3 +236,48 @@ mysql> SELECT *FROM AddressBook
 2 rows in set (0.00 sec)
 
 mysql>
+
+
+
+#UC9
+
+
+mysql> select *From AddressBook;
++----+------------+-----------+-----------+-----------+-------------+---------+--------------+-------------+
+| Id | First_Name | Last_Name | Address   | City      | State       | Zip     | Phone_Number | Email       |
++----+------------+-----------+-----------+-----------+-------------+---------+--------------+-------------+
+|  1 | abhishek   | kumar     | badarpur  | new delhi | delhi       |  110044 |   8368914101 | xyz@123     |
+|  2 | harsh      | kumar     | meethapur | new delhi | delhi       | 1011010 |   3743787878 | sssa@122    |
+|  3 | Kalyan     | Kumar     | Andheri   | Mumbai    | Maharashtra |  530066 |   9882763845 | pl@p.com    |
+|  4 | Atik       | Singh     | Dharavi   | Mumbai    | Maharashtra |  530044 |   9494631888 | mlk@mln.com |
++----+------------+-----------+-----------+-----------+-------------+---------+--------------+-------------+
+4 rows in set (0.00 sec)
+
+mysql>  ALTER TABLE AddressBook ADD type VARCHAR(15) DEFAULT 'Friend';
+Query OK, 0 rows affected (0.32 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql>  ALTER TABLE AddressBook ADD name VARCHAR(15);
+Query OK, 0 rows affected (0.42 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> select *From AddressBook;
++----+------------+-----------+-----------+-----------+-------------+---------+--------------+-------------+--------+------+
+| Id | First_Name | Last_Name | Address   | City      | State       | Zip     | Phone_Number | Email       | type   | name |
++----+------------+-----------+-----------+-----------+-------------+---------+--------------+-------------+--------+------+
+|  1 | abhishek   | kumar     | badarpur  | new delhi | delhi       |  110044 |   8368914101 | xyz@123     | Friend | NULL |
+|  2 | harsh      | kumar     | meethapur | new delhi | delhi       | 1011010 |   3743787878 | sssa@122    | Friend | NULL |
+|  3 | Kalyan     | Kumar     | Andheri   | Mumbai    | Maharashtra |  530066 |   9882763845 | pl@p.com    | Friend | NULL |
+|  4 | Atik       | Singh     | Dharavi   | Mumbai    | Maharashtra |  530044 |   9494631888 | mlk@mln.com | Friend | NULL |
++----+------------+-----------+-----------+-----------+-------------+---------+--------------+-------------+--------+------+
+4 rows in set (0.07 sec)
+
+mysql>
+
+
+
+
+
+
+
+
