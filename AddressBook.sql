@@ -274,6 +274,17 @@ mysql> select *From AddressBook;
 
 mysql>
 
+#UC10
+
+mysql>  SELECT COUNT(type) FROM addressbook;
++-------------+
+| COUNT(type) |
++-------------+
+|           4 |
++-------------+
+1 row in set (0.00 sec)
+
+mysql>
 
 
 
