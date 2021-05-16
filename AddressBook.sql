@@ -181,3 +181,26 @@ mysql> SELECT State,COUNT(State) FROM AddressBook GROUP BY State;
 | delhi |            2 |
 +-------+--------------+
 1 row in set (0.00 sec)
+
+#UC8
+
+
+
+mysql> INSERT INTO AddressBook(First_Name,Last_Name,Address,City,State,Zip,Phone_Number,Email) VALUES
+    -> ('Kalyan', 'Kumar', 'Andheri', 'Mumbai', 'Maharashtra', '530066','9882763845', 'pl@p.com'),
+    -> ('Atik', 'Singh', 'Dharavi', 'Mumbai', 'Maharashtra', '530044','9494631888', 'mlk@mln.com');
+Query OK, 2 rows affected (0.13 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+mysql> SELECT *FROM AddressBook
+    -> WHERE city ='Mumbai'
+    -> ORDER BY First_Name ASC;
++----+------------+-----------+---------+--------+-------------+--------+--------------+-------------+------+
+| Id | First_Name | Last_Name | Address | City   | State       | Zip    | Phone_Number | Email       | type |
++----+------------+-----------+---------+--------+-------------+--------+--------------+-------------+------+
+|  4 | Atik       | Singh     | Dharavi | Mumbai | Maharashtra | 530044 |   9494631888 | mlk@mln.com | NULL |
+|  3 | Kalyan     | Kumar     | Andheri | Mumbai | Maharashtra | 530066 |   9882763845 | pl@p.com    | NULL |
++----+------------+-----------+---------+--------+-------------+--------+--------------+-------------+------+
+2 rows in set (0.00 sec)
+
+mysql>
