@@ -308,6 +308,12 @@ mysql>  select *From AddressBook;
 mysql>
 
 
+
+#UC12
+
+ER diagram added;
+
+
 #UC13
 
 
